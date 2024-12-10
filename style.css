@@ -1,0 +1,31 @@
+
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: bisque; */
+}
+.accordion-head {
+  border: 2px solid black;
+  padding: 20px;
+  /* background-color: antiquewhite; */
+  position: relative;
+}
+.accordion-head::after {
+  content: "+";
+  position: absolute;
+  right: 10px;
+  color: red;
+  font-size: 35px;
+  top: 3px;
+  font-weight: bolder;
+}
+.accordion-head.active::after {
+  content: "-";
+  font-size: 38px;
+}
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in;
+}
